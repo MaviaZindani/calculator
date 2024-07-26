@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:simple_calculator/utlis/colors.dart';
 
-class button extends StatelessWidget {
-  String titel;
-  var color = dimblackcolor;
-  final VoidCallback onPress;
-  button({super.key, required this.titel, required this.color,required this.onPress});
-
+class Button extends StatelessWidget {
+  const Button({super.key, required this.titel, this.color=dimblackcolor,required this.onPress});
+    final String titel;
+    final Color color;
+    final VoidCallback onPress;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -30,11 +29,12 @@ class button extends StatelessWidget {
 }
 
 
-class button2 extends StatelessWidget {
-  String titel;
-  var color = dimblackcolor;
+class Button2 extends StatelessWidget {
+ const Button2({super.key, required this.titel, this.color=dimblackcolor,required this.onPress});
+
+  final String titel;
+  final color;
   final VoidCallback onPress;
-  button2({super.key, required this.titel, required this.color,required this.onPress});
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +54,6 @@ class button2 extends StatelessWidget {
           style: const TextStyle(color: Colors.white, fontSize: 25),
         )),
       ),
-    );;
+    );
   }
 }
